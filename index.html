@@ -1,0 +1,92 @@
+<html>
+<head>
+  <title>Kilo</title>
+  <link rel="stylesheet" href="jqtouch/jqtouch.css" type="text/css" media="screen">
+  <link rel="stylesheet" href="themes/apple/theme.css" type="text/css" media="screen">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+  <script src="jqtouch/jqtouch.js"></script>
+  <script src="kilo.js"></script>
+</head>
+<body>
+  <div id="home">
+    <div class="toolbar">
+      <h1>Kilo</h1>
+      <a href="#settings" class="button flip">Settings</a>
+    </div>
+    <ul>
+      <li class="arrow"><a href="#dates">Dates</a></li>
+      <li class="arrow"><a href="#about">About</a></li>
+    </ul>
+  </div>
+  
+  <div id="about">
+    <div class="toolbar">
+      <h1>About</h1>
+      <a href="#" class="button back">Back</a>
+    </div>
+    <div>
+      <p>Kilo gives you easy access to your food diary</p>
+    </div>
+  </div>
+
+  <div id="dates">
+    <div class="toolbar">
+      <h1>Dates</h1>
+      <a href="#" class="button back">Back</a>
+    </div>
+    <ul class="edgetoedge">
+      <li class="arrow"><a href="#date" id="0">Today</a></li>
+      <li class="arrow"><a href="#date" id="1">Yesterday</a></li>
+      <li class="arrow"><a href="#date" id="2">2 Days Ago</a></li>
+      <li class="arrow"><a href="#date" id="3">3 Days Ago</a></li>
+      <li class="arrow"><a href="#date" id="4">4 Days Ago</a></li>
+      <li class="arrow"><a href="#date" id="5">5 Days Ago</a></li>
+    </ul>
+  </div>
+  
+  <div id="date">
+    <div class="toolbar">
+      <h1>Date</h1>
+      <a href="#" class="button back">Back</a>
+      <a href="#createEntry" class="button slideup">+</a>
+    </div>
+    <ul class="edgetoedge">
+      <li id="entryTemplate" class="entry" style="display:none">
+        <span class="label">Label</span>
+        <span class="calories">000</span>
+        <span class="delete">Delete</span>
+      </li>
+    </ul>
+  </div>
+  
+  <div id="createEntry">
+    <div class="toolbar">
+      <h1>New Entry</h1>
+      <a href="#" class="button cancel">Cancel</a>
+    </div>
+    <form action="" method="post">
+      <ul>
+        <li><input type="text" placeholder="Food" name="food" id="food" autocapitalize="off" autocorrect="off" autocomplete="off" /></li>
+        <li><input type="text" placeholder="Calories" name="calories" id="calories" autocapitalize="off" autocorrect="off" autocomplete="off" /></li>
+        <li><input type="submit" class="submit" name="action" value="Save Entry" /></li>
+      </ul>
+    </form>
+  </div>
+  
+  <div id="settings">
+    <div class="toolbar">
+      <h1>Settings</h1>
+      <a href="#" class="button cancel">Cancel</a>
+    </div>
+    <form action="" method="post">
+      <ul>
+        <li><input type="text" placeholder="Age" name="age" id="age" /></li>
+        <li><input type="text" placeholder="Weight" name="weight" id="weight" /></li>
+        <li><input type="text" placeholder="Budget" name="budget" id="budget" /></li>
+        <li><input type="submit" class="submit" name="action" value="Save Changes" /></li>
+      </ul>
+    </form>
+  </div>
+  
+</body>
+</html>
